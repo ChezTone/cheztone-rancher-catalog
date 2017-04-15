@@ -1,0 +1,18 @@
+version: '2'
+services:
+  lb1:
+    image: rancher/lb-service-haproxy
+    ports:
+    - 82:80
+  frontend:
+    image: cheztone/cheztone-frontend
+    labels:
+      cheztone: front
+  game:
+    image: cheztone/cheztone-nuts
+    labels:
+      cheztone: front
+  dev:
+    image: cheztone/cheztone-front
+    labels:
+      cheztone: front

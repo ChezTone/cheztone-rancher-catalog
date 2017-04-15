@@ -1,0 +1,27 @@
+version: '2'
+services:
+  lb1:
+    scale: 1
+    lb_config:
+      port_rules:
+      - source_port: 80
+        selector: cheztone=front
+        protocol: http
+  frontend:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 80
+        hostname: cheztone.org
+  game:
+    scale: 1
+    lb_config:
+      port_rules:
+      - target_port: 80
+        hostname: game.cheztone.org
+  dev:
+      scale: 1
+      lb_config:
+        port_rules:
+        - target_port: 80
+          hostname: dev.cheztone.org
