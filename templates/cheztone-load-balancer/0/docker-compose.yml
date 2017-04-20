@@ -1,6 +1,6 @@
 version: '2'
 services:
-  lb1:
+  load-balancer:
     image: rancher/lb-service-haproxy
     ports:
     - 82:80

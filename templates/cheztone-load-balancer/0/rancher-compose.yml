@@ -1,10 +1,10 @@
 version: '2'
 catalog:
-  name: cheztone-load-balancer
+  name: haproxy
   version: 1.0.0
-  description: cheztone frontends
+  description: haproxy
 services:
-  lb1:
+  load-balancer:
     scale: 1
     lb_config:
       port_rules:
