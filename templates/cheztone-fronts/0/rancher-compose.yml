@@ -3,22 +3,29 @@ catalog:
   name: cheztone-front
   version: 1.0.0
   description: cheztone frontends
+  questions:
+    - variable: "host_domain"
+      description: "host domain used to deploy this catalog"
+      label: "Host"
+      required: true
+      default: ""
+      type: "string"
 services:
   frontend:
     scale: 1
     lb_config:
       port_rules:
       - target_port: 80
-        hostname: cheztone.org
+        hostname: ${host_domain}
   game:
     scale: 1
     lb_config:
       port_rules:
       - target_port: 80
-        hostname: game.cheztone.org
+        hostname: game.${host_domain}
   dev:
       scale: 1
       lb_config:
         port_rules:
         - target_port: 80
-          hostname: dev.cheztone.org
+          hostname: dev.${host_domain}

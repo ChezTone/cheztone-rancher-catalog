@@ -30,10 +30,17 @@ gateway:
     
 management-api:
   scale: 1
+  lb_config:
+        port_rules:
+        - target_port: 80
+          hostname: api.${management_host}
 
 management-ui:
   scale: 1
-
+  lb_config:
+        port_rules:
+        - target_port: 80
+          hostname: gravitee.${management_host}
 mongodb:
   scale: 1
 
