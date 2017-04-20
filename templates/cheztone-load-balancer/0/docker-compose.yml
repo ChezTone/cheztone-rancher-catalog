@@ -1,0 +1,6 @@
+version: '2'
+services:
+  lb1:
+    image: rancher/lb-service-haproxy
+    ports:
+    - 82:80

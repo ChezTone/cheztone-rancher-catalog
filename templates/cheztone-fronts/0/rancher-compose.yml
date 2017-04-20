@@ -4,13 +4,6 @@ catalog:
   version: 1.0.0
   description: cheztone frontends
 services:
-  lb1:
-    scale: 1
-    lb_config:
-      port_rules:
-      - source_port: 80
-        selector: cheztone=front
-        protocol: http
   frontend:
     scale: 1
     lb_config:
