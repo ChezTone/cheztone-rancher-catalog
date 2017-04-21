@@ -58,6 +58,6 @@ management-ui:
   links:
     - management-api
   environment:
-    - MGMT_API_URL=http://graviteeapi.${management_host}/management/
+    - MGMT_API_URL=https://graviteeapi.${management_host}/management/
   labels:
         lb: true
