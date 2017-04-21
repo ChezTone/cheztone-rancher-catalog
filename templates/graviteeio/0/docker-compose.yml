@@ -35,6 +35,8 @@ gateway:
     - GRAVITEEIO_MONGODB_PORT=27017
     - GRAVITEEIO_ELASTIC_HOST=elasticsearch
     - GRAVITEEIO_ELASTIC_PORT=9300
+  labels:
+        lb: true
     
 management-api:
   image: graviteeio/management-api:${docker_version}
@@ -47,6 +49,8 @@ management-api:
     - GRAVITEEIO_MONGODB_PORT=27017
     - GRAVITEEIO_ELASTIC_HOST=elasticsearch
     - GRAVITEEIO_ELASTIC_PORT=9300
+  labels:
+        lb: true
 
 management-ui:
   hostname: management-ui
@@ -55,3 +59,5 @@ management-ui:
     - management-api
   environment:
     - MGMT_API_URL=http://graviteeapi.${management_host}/management/
+  labels:
+        lb: true
