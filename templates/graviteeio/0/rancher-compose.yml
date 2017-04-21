@@ -19,6 +19,10 @@
 
 gateway:
   scale: 1
+  lb_config:
+    port_rules:
+    - target_port: 8082
+      hostname: api.${management_host}
   health_check:
     port: 8082
     interval: 2000
@@ -33,7 +37,7 @@ management-api:
   lb_config:
         port_rules:
         - target_port: 8083
-          hostname: api.${management_host}
+          hostname: graviteeapi.${management_host}
 
 management-ui:
   scale: 1
