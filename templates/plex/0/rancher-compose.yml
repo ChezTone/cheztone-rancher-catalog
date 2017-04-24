@@ -1,0 +1,20 @@
+version: '2'
+catalog:
+  name: plex
+  version: 1.0.0
+  description: plex media center
+  questions:
+    - variable: "host_domain"
+      description: "host domain used to deploy this catalog"
+      label: "Host"
+      required: true
+      default: ""
+      type: "string"
+services:
+  plex:
+    scale: 1
+    start_on_create: true
+    lb_config:
+      port_rules:
+      - target_port: 32400
+        hostname: plex.${host_domain}

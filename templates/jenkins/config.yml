@@ -1,0 +1,4 @@
+name: jenkins
+description: jenkins CI
+version: 1.0.0
+category: service
