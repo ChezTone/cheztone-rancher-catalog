@@ -1,5 +1,5 @@
 jenkins-primary:
-  image: "jenkins:2.19.4"
+  image: jenkins:2.46.2
   labels:
     io.rancher.sidekicks: jenkins-plugins,jenkins-datavolume
     io.rancher.container.hostname_override: container_name
@@ -13,7 +13,7 @@ jenkins-primary:
 jenkins-plugins:
   image: rancher/jenkins-plugins:v0.1.1
 jenkins-datavolume:
-  image: "busybox"
+  image: busybox
   volumes:
     - ${volume_work}:/var/jenkins_home
   labels:
