@@ -1,5 +1,5 @@
 jenkins-primary:
-  image: jenkins:2.46.2
+  image: cheztone/jenkins
   labels:
     io.rancher.sidekicks: jenkins-plugins,jenkins-datavolume
     io.rancher.container.hostname_override: container_name
@@ -8,8 +8,6 @@ jenkins-primary:
     - jenkins-plugins
     - jenkins-datavolume
   entrypoint: /usr/share/jenkins/rancher/jenkins.sh
-  expose:
-    - "8080"
 jenkins-plugins:
   image: rancher/jenkins-plugins:v0.1.1
 jenkins-datavolume:
