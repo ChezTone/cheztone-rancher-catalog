@@ -3,6 +3,7 @@ jenkins-primary:
   labels:
     io.rancher.sidekicks: jenkins-plugins,jenkins-datavolume
     io.rancher.container.hostname_override: container_name
+    lb: true
   volumes_from:
     - jenkins-plugins
     - jenkins-datavolume
