@@ -1,4 +1,4 @@
 jenkins-primary:
-  image: cheztone/jenkins
+  image: jenkinsci/jenkins:lts
   labels:
     lb: true
