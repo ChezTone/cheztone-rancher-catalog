@@ -1,4 +1,4 @@
 jenkins-primary:
   image: jenkinsci/jenkins:lts
   labels:
-    lb: true
+    lb: "true"

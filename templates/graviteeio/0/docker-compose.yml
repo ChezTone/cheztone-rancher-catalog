@@ -36,7 +36,7 @@ gateway:
     - GRAVITEEIO_ELASTIC_HOST=elasticsearch
     - GRAVITEEIO_ELASTIC_PORT=9300
   labels:
-        lb: true
+        lb: "true"
     
 management-api:
   image: graviteeio/management-api:${docker_version}
@@ -50,7 +50,7 @@ management-api:
     - GRAVITEEIO_ELASTIC_HOST=elasticsearch
     - GRAVITEEIO_ELASTIC_PORT=9300
   labels:
-        lb: true
+        lb: "true"
 
 management-ui:
   hostname: management-ui
@@ -60,4 +60,4 @@ management-ui:
   environment:
     - MGMT_API_URL=https://graviteeapi.${management_host}/management/
   labels:
-        lb: true
+        lb: "true"

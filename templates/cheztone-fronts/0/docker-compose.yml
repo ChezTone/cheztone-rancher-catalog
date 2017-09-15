@@ -1,14 +1,14 @@
-version: '2'
+version: "3"
 services:
   frontend:
     image: cheztone/cheztone-frontend
     labels:
-      lb: true
+      lb: "true"
   game:
     image: cheztone/cheztone-nuts
     labels:
-      lb: true
+      lb: "true"
   dev:
     image: cheztone/cheztone-front
     labels:
-      lb: true
+      lb: "true"
