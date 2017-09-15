@@ -1,5 +1,4 @@
-version: "3"
-catalog:
+.catalog:
   name: plex
   version: 1.0.0
   description: plex media center

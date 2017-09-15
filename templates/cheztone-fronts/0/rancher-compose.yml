@@ -1,5 +1,4 @@
-version: "3"
-catalog:
+.catalog:
   name: cheztone-front
   version: 1.0.0
   description: cheztone frontends
