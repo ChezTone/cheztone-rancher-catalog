@@ -1,4 +1,5 @@
-.catalog:
+version: '2'
+catalog:
   name: haproxy
   version: 1.0.0
   description: haproxy

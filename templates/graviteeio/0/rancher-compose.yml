@@ -1,4 +1,5 @@
-.catalog:
+version: '2'
+catalog:
   name: Gravitee.io
   version: Lastest
   description: Gravitee.io API Management
